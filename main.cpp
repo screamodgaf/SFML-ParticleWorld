@@ -234,23 +234,23 @@ void updateUpLeft(Sand& sandClass, Water& waterClass, Oil& oilClass, Fire& fireC
             char currentC   = world.getParticleType(x,y);
             if(currentC == air || currentC == rock) continue;
 
-            if(currentC == sand)
+            else if(currentC == sand)
                 sandClass.moveSand(x, y);
 
 
-            if(currentC == water) //WATER
+            else if(currentC == water) //WATER
                 waterClass.moveWater(x, y);
 
-            if(currentC == oil) //Oil
+            else if(currentC == oil) //Oil
                 oilClass.moveOil(x,y);
 
-            if(currentC == fire) //Fire
+            else if(currentC == fire) //Fire
                 fireClass.moveFire(x, y);
 
-            if(currentC == smoke ) //Smoke
+            else if(currentC == smoke ) //Smoke
                 smokeClass.moveSmoke(x,y);
 
-            if(currentC == wood)
+            else if(currentC == wood)
                 woodClass.moveWood(x,y);
         }//end for
     }
@@ -267,24 +267,24 @@ void updateUpRight(Sand& sandClass, Water& waterClass, Oil& oilClass, Fire& fire
             char currentC   = world.getParticleType(x,y);
             if(currentC == air || currentC == rock) continue;
 
-            if(currentC == sand)
+            else if(currentC == sand)
                 sandClass.moveSand(x, y);
 
 
-            if(currentC == water) //WATER
+            else if(currentC == water) //WATER
                 waterClass.moveWater(x, y);
 
-            if(currentC == oil) //Oil
+            else if(currentC == oil) //Oil
                 oilClass.moveOil(x,y);
 
-            if(currentC == fire) //Fire
+            else if(currentC == fire) //Fire
                 fireClass.moveFire(x, y);
 
 
-            if(currentC == smoke) //Smoke
+            else if(currentC == smoke) //Smoke
                 smokeClass.moveSmoke(x,y);
 
-            if(currentC == wood)
+            else if(currentC == wood)
                 woodClass.moveWood(x,y);
         }//end for
     }
@@ -301,23 +301,23 @@ void updateLeft(Sand& sandClass, Water& waterClass, Oil& oilClass, Fire& fireCla
             char currentC   = world.getParticleType(x,y);
             if(currentC == air || currentC == rock) continue;
 
-            if(currentC == sand)
+            else if(currentC == sand)
                 sandClass.moveSand(x, y);
 
-            if(currentC == water) //WATER
+            else if(currentC == water) //WATER
                 waterClass.moveWater(x, y);
 
-            if(currentC == oil) //Oil
+            else if(currentC == oil) //Oil
                 oilClass.moveOil(x,y);
 
-            if(currentC == fire) //Fire
+            else if(currentC == fire) //Fire
                 fireClass.moveFire(x, y);
 
 
-            if(currentC == smoke) //Smoke
+            else if(currentC == smoke) //Smoke
                 smokeClass.moveSmoke(x,y);
 
-            if(currentC == wood)
+            else if(currentC == wood)
                 woodClass.moveWood(x,y);
         }//end for
     }
@@ -334,23 +334,23 @@ void updateRight(Sand& sandClass, Water& waterClass, Oil& oilClass, Fire& fireCl
             char currentC   = world.getParticleType(x,y);
             if(currentC == air || currentC == rock) continue;
 
-            if(currentC == sand)
+            else if(currentC == sand)
                 sandClass.moveSand(x, y);
 
-            if(currentC == water) //WATER
+            else if(currentC == water) //WATER
                 waterClass.moveWater(x, y);
 
-            if(currentC == oil) //Oil
+            else if(currentC == oil) //Oil
                 oilClass.moveOil(x,y);
 
-            if(currentC == fire) //Fire
+            else if(currentC == fire) //Fire
                 fireClass.moveFire(x, y);
 
 
-            if(currentC == smoke) //Smoke
+            else if(currentC == smoke) //Smoke
                 smokeClass.moveSmoke(x,y);
 
-            if(currentC == wood)
+            else if(currentC == wood)
                 woodClass.moveWood(x,y);
         }//end for
     }
@@ -420,12 +420,12 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
-            if(event.type == sf::Event::Resized)
+            else if(event.type == sf::Event::Resized)
                 window.setView(sf::View(sf::FloatRect(0, 0, event.size.width, event.size.height)));
         }
 
         window.clear();
-        window.draw(s); //background
+//        window.draw(s); //background
 
         checkLeftClicks(window);
 
